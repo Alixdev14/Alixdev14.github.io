@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <nav class="topnav" style="background-color: #1a1c20;">
+        <a style="width: 175px;";" class="active">Webvatten</a>
+        <a class="active">Home</a>
+        <a>Blog</a>
+        <a>About</a>
+    </nav>
+    <link href='{% static 'style.css' %}' rel="stylesheet">
+
+    {% block title %}
+    <title>Document</title>
+    {% endblock  %}
+
+</head>
+<body>
+{% block body %}
+
+{% endblock body %}
+
+</body>
+</html>

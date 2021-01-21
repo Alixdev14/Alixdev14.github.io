@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webvatten engagement calculator</title>
+    <link href="{% static 'style.css'%}" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'webvattenLogo.png'%}"/>
+</head>
+<body>
+
+<nav class="topnav" style="background-color: #1a1c20; 
+position: -webkit-sticky;
+  position:sticky;
+  top:0;">
+<a style="width: 175px;";" class="active">Webvatten</a>
+<a class="active">Home</a>
+<a>Blog</a>
+<a>About</a>
+</nav>
+<div class="container" style="padding-top: 10px; padding-bottom: 50px;">
+<h1 id="engagement">Webvatten engagement<br><span class="beta">/Beta</span> calculator</h1>
+</div>  
+<div class="container">
+    <div class="engageForm">
+    <form action="engagement">
+        Enter the targeted account: <br><input type="text" name="targetProfile" style="border-radius: 5px; border-color: #1a1c20;">
+    <input type="submit">
+    </form>
+    </div>
+</div>
+<div class="container" style="width: 80%; height: 900px; margin-left: 150px; margin-top: 0;">
+<p class="result" style="left: 50%;">The engagement is<br><span class="djangoReult">{{engagement|floatformat:2 }}</span></p> 
+<p class="result" style="left: 0px;">Number of posts<br><span class="djangoReult">{{total_numof_posts}}</span></p>
+<p class="result" style="bottom: 500px; left: 100px; margin: 0;">Avg likes<br><span class="djangoReult">{{Avglikes}}</span></p>
+<p class="result" style="bottom: 500px; left: 600px; margin: 0;">Avg comments<br><span class="djangoReult">{{Avgcomments}}</span></p>
+
+<p class="note">*This is a beta version of webvatten engagement calculator.<br>We are working on developing this web app and make it better <br>From Devs to Devs! </p>
+
+</div>
+<footer class="footer">
+    <ul id="menu">
+        <li></li>
+        <li><a href="https://www.instagram.com/webvatten/" target="_blank">Follow us on Instagram</a></li>
+        <li><a href="http://twitter.com/webvatten" target="_blank">Follow us on Twitter</a></li>
+        <li></li>
+
+    </ul>
+    <p class="footerAbout">Blog | Brand | Content creation<br>
+    From Devs to Devs!</p>
+<p class="footerWebvatten" style="background-color: #1d2d50;">@Webvatten</p>
+
+</footer>
+</body>
+</html>

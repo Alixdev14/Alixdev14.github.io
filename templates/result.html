@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Result</title>
+    {% endblock title %}
+</head>
+<body>
+{% block body %}
+<p id="engagement">The engagement is<br>{{engagement|floatformat:2 }}</p> 
+<p id="engagement">Number of posts<br>{{total_numof_posts}}</p>
+<p id="engagement">Avg likes<br>{{Avglikes}}</p>
+<p id="engagement">Avg comments<br>{{Avgcomments}}</p>
+
+
+{% endblock body %}
+</body>
+</html>
